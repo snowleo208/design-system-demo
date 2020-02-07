@@ -1,5 +1,7 @@
 # Design System
 
+[![<snowleo208>](https://circleci.com/github/snowleo208/design-system-demo.svg?style=svg)](https://app.circleci.com/github/snowleo208/design-system-demo/pipelines)
+
 A simple design system demo using monorepo (Lerna), TypeScript and React with CSS in JS (emotion).
 
 ## Source
