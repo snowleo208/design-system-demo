@@ -54,6 +54,6 @@ test('shows Title in different size', () => {
 
   expect(getByText(testMessage)).toHaveStyleRule(
     'font-size',
-    themeList.title[2]
+    themeList.title[2] + 'px'
   );
 });
