@@ -18,20 +18,20 @@ const Button: React.SFC<Button> = props => {
     display: 'inline-block',
     fontFamily: 'inherit',
     fontSize: '0.9rem',
-    backgroundColor: isPrimary ? themeData.colors.primary : null,
-    color: isPrimary ? 'white' : themeData.colors.primary,
+    backgroundColor: isPrimary ? themeData.colors.accent.default : null,
+    color: isPrimary ? 'white' : themeData.colors.accent.default,
     border: isPrimary
       ? 'solid 1px transparent'
-      : `solid 1px ${themeData.colors.primary}`,
+      : `solid 1px ${themeData.colors.accent.default}`,
     padding: `${themeData.spacing[1]} ${themeData.spacing[2]}`,
     textDecoration: 'none',
     transition: `ease ${themeData.ease[1]}ms`,
     cursor: 'pointer',
     '&:hover': {
-      backgroundColor: isPrimary ? 'white' : themeData.colors.primary,
-      color: isPrimary ? themeData.colors.primary : 'white',
+      backgroundColor: isPrimary ? 'white' : themeData.colors.accent.default,
+      color: isPrimary ? themeData.colors.accent.default : 'white',
       border: isPrimary
-        ? `solid 1px ${themeData.colors.primary}`
+        ? `solid 1px ${themeData.colors.accent.default}`
         : 'solid 1px transparent'
     }
   };

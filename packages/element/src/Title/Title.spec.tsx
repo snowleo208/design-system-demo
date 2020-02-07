@@ -22,7 +22,7 @@ test('shows custom text', () => {
 
   expect(getByText(testMessage)).toHaveStyleRule(
     'color',
-    themeList.colors.lightBlack
+    themeList.colors.light.black
   );
 });
 
@@ -38,7 +38,7 @@ test('shows secondary Title', () => {
 
   expect(getByText(testMessage)).toHaveStyleRule(
     'color',
-    themeList.colors.greyDark
+    themeList.colors.light.greyDark
   );
 });
 

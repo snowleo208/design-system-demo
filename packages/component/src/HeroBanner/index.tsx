@@ -4,9 +4,7 @@ import React from 'react';
 import { jsx, css } from '@emotion/core';
 import { useTheme } from 'emotion-theming';
 import { themeList } from '@ds-starter/theme';
-
-// import { Image, Title, Button } from '@ds-starter/element';
-const { Image, Title, Button } = require('@ds-starter/element');
+import { Image, Title, Button } from '@ds-starter/element';
 
 interface HeroBanner extends React.AnchorHTMLAttributes<HTMLElement> {
   title: string;
@@ -18,11 +16,11 @@ interface HeroBanner extends React.AnchorHTMLAttributes<HTMLElement> {
 }
 
 const HeroBanner: React.SFC<HeroBanner> = props => {
-  const { children, title, subtitle, ...rest } = props;
+  const { children, title, subtitle, btn1Text, btn2Text, ...rest } = props;
   const themeData: typeof themeList = useTheme();
 
   const subTextStyles = {
-    color: themeData.colors.greyDark
+    color: themeData.colors.light.greyDark
   };
 
   const outerStyles = {
@@ -64,13 +62,13 @@ const HeroBanner: React.SFC<HeroBanner> = props => {
     <section css={outerStyles} {...rest}>
       <Image src="https://dummyimage.com/540x440/ccc/fff" alt="Hero Image" />
       <div css={bannerTextGridStyles}>
-        <Title type="h1" size="2" theme="primary">
+        <Title type="h1" size={2} theme="primary">
           {title}
         </Title>
         <p css={subTextStyles}>{subtitle}</p>
         <div css={btnGridStyles}>
-          <Button variant="primary">Primary Action</Button>
-          <Button variant="secondary">Secondary Action</Button>
+          <Button variant="primary">{btn1Text}</Button>
+          <Button variant="secondary">{btn2Text}</Button>
         </div>
       </div>
     </section>

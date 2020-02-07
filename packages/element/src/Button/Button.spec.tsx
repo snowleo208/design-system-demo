@@ -29,7 +29,7 @@ test('shows primary button', () => {
 
   expect(getByText(testMessage)).toHaveStyleRule(
     'background-color',
-    themeList.colors.primary
+    themeList.colors.accent.default
   );
 
   expect(getByText(testMessage)).toHaveStyleRule('color', 'white');
@@ -45,10 +45,10 @@ test('shows secondary button', () => {
 
   expect(getByText(testMessage)).not.toHaveStyleRule(
     'background-color',
-    themeList.colors.primary
+    themeList.colors.accent.default
   );
   expect(getByText(testMessage)).toHaveStyleRule(
     'color',
-    themeList.colors.primary
+    themeList.colors.accent.default
   );
 });

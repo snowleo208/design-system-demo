@@ -22,8 +22,8 @@ const Title = (props: Title) => {
       : themeData.title[type.replace('h', '')],
     color:
       theme === 'primary'
-        ? themeData.colors.lightBlack
-        : themeData.colors.greyDark,
+        ? themeData.colors.light.black
+        : themeData.colors.light.greyDark,
     lineHeight: themeData.lineHeight.title,
     margin: 0
   };
