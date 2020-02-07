@@ -1,0 +1,13 @@
+{
+  "name": "@ds-starter/element",
+  "version": "0.1.0",
+  "description": "all elements in design system of building components",
+  "main": "dist/index.js",
+  "module": "src/index.ts",
+  "author": "snowleo208",
+  "license": "ISC",
+  "dependencies": {
+    "@ds-starter/theme": "^0.1.0",
+    "@ds-starter/icons": "^0.1.0"
+  }
+}

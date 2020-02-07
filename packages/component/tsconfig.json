@@ -1,0 +1,10 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "baseUrl": "./src",
+    "outDir": "./lib",
+    "moduleResolution": "node"
+  },
+  "include": ["./src", "index.js"],
+  "exclude": ["node_modules", "**/*.spec.ts"]
+}

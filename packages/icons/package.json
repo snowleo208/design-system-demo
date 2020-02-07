@@ -1,0 +1,9 @@
+{
+  "name": "@ds-starter/icons",
+  "version": "0.1.0",
+  "description": "icon package",
+  "main": "dist/index.js",
+  "module": "src/index.tsx",
+  "author": "snowleo208",
+  "license": "ISC"
+}

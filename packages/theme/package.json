@@ -1,0 +1,9 @@
+{
+  "name": "@ds-starter/theme",
+  "version": "0.1.0",
+  "description": "all theme settings of ds-starter",
+  "main": "dist/index.js",
+  "module": "src/index.ts",
+  "author": "snowleo208",
+  "license": "ISC"
+}

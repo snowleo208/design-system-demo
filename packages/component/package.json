@@ -1,0 +1,13 @@
+{
+  "name": "@ds-starter/component",
+  "version": "0.1.0",
+  "description": "",
+  "main": "dist/index.js",
+  "module": "src/index.ts",
+  "dependencies": {
+    "@ds-starter/element": "^0.1.0",
+    "@ds-starter/theme": "^0.1.0"
+  },
+  "author": "snowleo208",
+  "license": "ISC"
+}
