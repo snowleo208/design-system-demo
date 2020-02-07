@@ -3,7 +3,7 @@
 import React from 'react';
 import { jsx, css } from '@emotion/core';
 import { useTheme } from 'emotion-theming';
-import { themeList } from '@ds-starter/theme';
+import { Theme } from '@ds-starter/theme';
 import { Image, Title, Button } from '@ds-starter/element';
 
 interface HeroBanner extends React.AnchorHTMLAttributes<HTMLElement> {
@@ -17,7 +17,7 @@ interface HeroBanner extends React.AnchorHTMLAttributes<HTMLElement> {
 
 const HeroBanner: React.SFC<HeroBanner> = props => {
   const { children, title, subtitle, btn1Text, btn2Text, ...rest } = props;
-  const themeData: typeof themeList = useTheme();
+  const themeData: Theme = useTheme();
 
   const subTextStyles = {
     color: themeData.colors.light.greyDark
