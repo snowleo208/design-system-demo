@@ -21,7 +21,7 @@ const themes = {
     error: '#FB4E4E'
   },
   ease: [200, 400, 600],
-  spacing: [0, 8, 16, 24, 32, 40]
+  spacing: [0, 4, 8, 12, 16, 20, 24, 28, 32, 40]
 };
 
 export type Theme = typeof themes;
