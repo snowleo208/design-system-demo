@@ -47,10 +47,5 @@
     "build:icons": "npx @svgr/cli --template npm-scripts/icon-template.js --ext tsx --icon --replace-attr-values \"#3C64B1=currentColor\" -d ./packages/icons/src ./icons",
     "test": "jest",
     "prepare": "husky install"
-  },
-  "husky": {
-    "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-    }
   }
 }
