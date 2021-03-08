@@ -1,8 +1,7 @@
 /** @jsx jsx */
 
 import React from 'react';
-import { jsx, css } from '@emotion/core';
-import { useTheme } from 'emotion-theming';
+import { jsx, css, useTheme } from '@emotion/react';
 import { Theme } from '@ds-starter/theme';
 
 interface Button extends React.AnchorHTMLAttributes<HTMLElement> {
@@ -11,7 +10,7 @@ interface Button extends React.AnchorHTMLAttributes<HTMLElement> {
 
 const Button: React.SFC<Button> = props => {
   const { children, variant, ...rest } = props;
-  const themeData: Theme = useTheme();
+  const themeData = useTheme() as Theme;
   const isPrimary = variant === 'primary';
 
   const styles = {
@@ -23,7 +22,7 @@ const Button: React.SFC<Button> = props => {
     border: isPrimary
       ? 'solid 1px transparent'
       : `solid 1px ${themeData.colors.accent.default}`,
-    padding: `${themeData.spacing[1]} ${themeData.spacing[2]}`,
+    padding: `${themeData.spacing[1]}px ${themeData.spacing[2]}px`,
     textDecoration: 'none',
     transition: `ease ${themeData.ease[1]}ms`,
     cursor: 'pointer',

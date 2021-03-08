@@ -1,8 +1,8 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 import Button from './';
-import { ThemeProvider } from 'emotion-theming';
-import { matchers } from 'jest-emotion';
+import { ThemeProvider } from '@emotion/react';
+import { matchers } from '@emotion/jest';
 import { themeList } from '@ds-starter/theme';
 
 // Add the custom matchers provided by 'jest-emotion'

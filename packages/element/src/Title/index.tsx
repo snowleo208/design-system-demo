@@ -1,8 +1,7 @@
 /** @jsx jsx */
 
 import React from 'react';
-import { jsx, css } from '@emotion/core';
-import { useTheme } from 'emotion-theming';
+import { jsx, css, useTheme } from '@emotion/react';
 import { Theme } from '@ds-starter/theme';
 
 interface Title extends React.HTMLAttributes<HTMLHeadingElement> {
@@ -13,7 +12,7 @@ interface Title extends React.HTMLAttributes<HTMLHeadingElement> {
 
 const Title = (props: Title) => {
   const { children, type, size, theme, ...rest } = props;
-  const themeData: Theme = useTheme();
+  const themeData = useTheme() as Theme;
 
   const styles = {
     fontFamily: 'inherit',

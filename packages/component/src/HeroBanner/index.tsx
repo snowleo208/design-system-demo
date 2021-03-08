@@ -1,8 +1,7 @@
 /** @jsx jsx */
 
 import React from 'react';
-import { jsx, css } from '@emotion/core';
-import { useTheme } from 'emotion-theming';
+import { jsx, css, useTheme } from '@emotion/react';
 import { Theme } from '@ds-starter/theme';
 import { Image, Title, Button } from '@ds-starter/element';
 
@@ -15,7 +14,7 @@ interface HeroBanner extends React.AnchorHTMLAttributes<HTMLElement> {
   btn2Action?: Function | string;
 }
 
-const HeroBanner: React.SFC<HeroBanner> = props => {
+const HeroBanner: React.FC<HeroBanner> = props => {
   const { children, title, subtitle, btn1Text, btn2Text, ...rest } = props;
   const themeData: Theme = useTheme();
 
@@ -28,12 +27,12 @@ const HeroBanner: React.SFC<HeroBanner> = props => {
     display: 'flex',
     flexFlow: 'column wrap',
     h1: {
-      margin: `0 0 ${themeData.spacing[4]} 0`
+      margin: `0 0 ${themeData.spacing[4]}px 0`
     },
     p: {
       margin: `0 0 56px 0`
     },
-    padding: `${themeData.spacing[2]} ${themeData.spacing[2]}`,
+    padding: `${themeData.spacing[2]}px ${themeData.spacing[2]}px`,
     '@media only screen and (min-width: 768px)': {
       flexFlow: 'row wrap'
     }
@@ -51,9 +50,9 @@ const HeroBanner: React.SFC<HeroBanner> = props => {
     display: 'flex',
     flexFlow: 'row wrap',
     a: {
-      margin: `0 ${themeData.spacing[3]} ${themeData.spacing[3]} 0`,
+      margin: `0 ${themeData.spacing[3]}px ${themeData.spacing[3]}px 0`,
       '@media only screen and (min-width: 768px)': {
-        margin: `0 ${themeData.spacing[3]} 0 0`
+        margin: `0 ${themeData.spacing[3]}px 0 0`
       }
     }
   };
