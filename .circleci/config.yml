@@ -11,12 +11,21 @@ jobs:
           override-ci-command: yarn install --frozen-lockfile
       - run: yarn test
   accessibility:
-    image: docker/compose
+    docker: 
+      - image: cimg/base:2021.03-20.04
     steps:
       - checkout
-      - run: docker-compose up --build 
+      - setup_remote_docker
+      - run:
+          command: docker info
+      - run:
+          name: Accessibility tests
+          command: |
+            set -x
+            cat ./docker-compose.yml
+            docker-compose -f ./docker-compose.yml up -d
 workflows:
   tests:
     jobs:
-      - test
+      # - test
       - accessibility
