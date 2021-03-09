@@ -16,7 +16,7 @@ const Image: React.SFC<Image> = props => {
     maxWidth: '100%'
   };
 
-  return <img css={styles} {...rest} src={src} />;
+  return <img css={styles} alt={props.alt || ""} {...rest} src={src} />;
 };
 
 export default Image;
