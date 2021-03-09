@@ -16,7 +16,7 @@ interface HeroBanner extends React.AnchorHTMLAttributes<HTMLElement> {
 
 const HeroBanner: React.FC<HeroBanner> = props => {
   const { children, title, subtitle, btn1Text, btn2Text, ...rest } = props;
-  const themeData: Theme = useTheme();
+  const themeData = useTheme() as Theme;
 
   const subTextStyles = {
     color: themeData.colors.light.greyDark
