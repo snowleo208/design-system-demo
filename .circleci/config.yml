@@ -10,7 +10,13 @@ jobs:
           cache-path: ~/project/node_modules
           override-ci-command: yarn install --frozen-lockfile
       - run: yarn test
+  accessibility:
+    image: docker/compose
+    steps:
+      - checkout
+      - run: docker-compose up --build 
 workflows:
-  test_my_app:
+  tests:
     jobs:
       - test
+      - accessibility
