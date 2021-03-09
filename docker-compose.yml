@@ -1,0 +1,30 @@
+version: "3"
+
+services:
+  web:
+    volumes:
+      - app-content:/opt/app/
+    build: .
+    logging:
+      driver: none
+    networks:
+      defaults:
+    ports:
+      - "6006:6006"
+    tty: false
+  accessibility:
+    image: "buildkite/puppeteer:7.1.0"
+    networks:
+      defaults:
+    working_dir: /opt/app/
+    volumes:
+      - app-content:/opt/app/
+    depends_on:
+      - web
+    command: /bin/sh -c "npx wait-on http://web:6006 && yarn test:a11y"
+volumes:
+  app-content:
+
+networks:
+  defaults:
+    driver: bridge

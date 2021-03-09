@@ -7,7 +7,7 @@ const themes = {
   colors: {
     light: {
       black: '#373F41',
-      greyDark: '#737B7D',
+      greyDark: '#757575',
       grey: '#C3CBCD',
       divider: '#E2E5E6',
       greyLightest: '#F4F5F4',

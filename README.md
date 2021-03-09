@@ -12,7 +12,7 @@ Design system from (Wireframe kit)[https://www.figma.com/file/JbRWyHH5uS5psDinzy
 
 This repo is using `yarn`.
 
-Clone this repo, run `yarn` then run `yarn storybook`. It will open in `http://localhost:9001`. You can change this port in `package.json`.
+Clone this repo, run `yarn` then run `yarn storybook`. It will open in `http://localhost:6006`. You can change this port in `package.json`.
 
 ## Demo
 

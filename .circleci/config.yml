@@ -8,9 +8,25 @@ jobs:
       - checkout
       - node/install-packages:
           cache-path: ~/project/node_modules
-          override-ci-command: yarn
+          override-ci-command: yarn install --frozen-lockfile
       - run: yarn test
+  accessibility:
+    docker: 
+      - image: cimg/base:2021.03-20.04
+    steps:
+      - checkout
+      - setup_remote_docker:
+          version: 19.03.13
+      - run:
+          command: docker info
+      - run:
+          name: Accessibility tests
+          command: |
+            set -x
+            cat ./docker-compose.yml
+            docker-compose -f ./docker-compose.yml up --exit-code-from accessibility
 workflows:
-  test_my_app:
+  tests:
     jobs:
       - test
+      - accessibility
