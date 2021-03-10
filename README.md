@@ -16,4 +16,4 @@ Clone this repo, run `yarn` then run `yarn storybook`. It will open in `http://l
 
 ## Demo
 
-WIP
+[Live Demo](https://eloquent-wozniak-1c7b88.netlify.app/)
